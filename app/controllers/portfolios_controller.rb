@@ -1,5 +1,5 @@
 class PortfoliosController < ApplicationController
-
+  before_action :set_portfolio_item, only: [:edit, :update]
   def index
     @portfolio_items = Portfolio.all
   end
@@ -13,7 +13,20 @@ class PortfoliosController < ApplicationController
 
     respond_to do |format|
       if @portfolio_item.save
-        format.html { redirect_to portfolios_path, notice: 'Blog was successfully created.' }
+        format.html { redirect_to portfolios_path, notice: 'Portfolio was successfully created.' }
+      else
+        format.html { render :new }
+      end
+    end
+  end
+
+  def edit
+  end
+
+  def update
+    respond_to do |format|
+      if @portfolio_item.update(portfolio_params)
+        format.html { redirect_to portfolios_path, notice: 'Record successfully updated.' }
       else
         format.html { render :new }
       end
@@ -21,6 +34,10 @@ class PortfoliosController < ApplicationController
   end
 
   private
+
+  def set_portfolio_item
+    @portfolio_item = Portfolio.find(params[:id])
+  end
 
   def portfolio_params
     params.require(:portfolio).permit(:title, :subtitle, :body, :main_image, :thumb_image)
