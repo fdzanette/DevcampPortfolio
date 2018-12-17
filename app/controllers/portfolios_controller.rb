@@ -1,7 +1,10 @@
 class PortfoliosController < ApplicationController
-  before_action :set_portfolio_item, only: [:edit, :update]
+  before_action :set_portfolio_item, only: [:show, :edit, :update, :destroy]
   def index
     @portfolio_items = Portfolio.all
+  end
+
+  def show
   end
 
   def new
@@ -30,6 +33,13 @@ class PortfoliosController < ApplicationController
       else
         format.html { render :new }
       end
+    end
+  end
+
+  def destroy
+    @portfolio_item.destroy
+    respond_to do |format|
+      format.html { redirect_to portfolios_path, notice: 'Portfolio Item was successfully destroyed.' }
     end
   end
 
