@@ -33,6 +33,8 @@ gem 'friendly_id', '~> 5.1'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'devise', '~> 4.5'
+gem 'bootstrap', '~> 4.2.1'
+gem 'jquery-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
