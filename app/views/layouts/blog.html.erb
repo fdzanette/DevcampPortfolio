@@ -19,6 +19,8 @@
 
     <%= yield %>
 
+    <%= source_helper("blog") %>
+
     <footer class="blog-footer">
       <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
       <p>
@@ -26,9 +28,6 @@
       </p>
     </footer>
 
-    <%= render 'shared/nav', location: 'bottom' %>
-
-    <%= source_helper("blog") %>
 
   </body>
 </html>
