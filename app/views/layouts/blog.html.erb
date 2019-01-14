@@ -16,18 +16,22 @@
   <body>
 
     <%= render 'blog_nav' %>
+    <%= render 'blog_header' %>
 
-    <%= yield %>
+    <div class="container">
+      <div class="row">
 
-    <%= source_helper("blog") %>
 
-    <footer class="blog-footer">
-      <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-      <p>
-        <a href="#">Back to top</a>
-      </p>
-    </footer>
+        <%= yield %>
 
+        <%= render 'blog_sidebar' %>
+
+        <%= source_helper("blog") %>
+
+      </div>
+    </div>
+
+    <%= render 'blog_footer' %>
 
   </body>
 </html>

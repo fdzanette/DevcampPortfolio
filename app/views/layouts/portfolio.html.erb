@@ -14,14 +14,16 @@
 
   <body>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
 
-    <%= render 'shared/nav', location: 'top' %>
+    <%#= render 'shared/nav', location: 'top' %>
 
-    <%= login_helper %>
+    <%= render 'portfolio_navbar' %>
+
+    <%= render 'portfolio_header' unless logged_in?(:site_admin) %>
 
     <%= yield %>
+
+    <%= render 'portfolio_footer' %>
 
     <%= source_helper("application") %>
 
