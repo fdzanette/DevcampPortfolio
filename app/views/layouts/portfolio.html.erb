@@ -14,14 +14,26 @@
 
   <body>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
 
-    <%= render 'shared/nav', location: 'top' %>
+    <%#= render 'shared/nav', location: 'top' %>
+
+    <%= render 'portfolio_navbar' %>
+
+    <%= render 'portfolio_header' %>
 
     <%= login_helper %>
 
     <%= yield %>
+
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+        <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+      </div>
+    </footer>
 
     <%= source_helper("application") %>
 
