@@ -19,7 +19,7 @@
 
     <%= render 'portfolio_navbar' %>
 
-    <%= render 'portfolio_header' %>
+    <%= render 'portfolio_header' unless logged_in?(:site_admin) %>
 
     <%= yield %>
 
