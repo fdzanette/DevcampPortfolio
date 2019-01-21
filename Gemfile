@@ -44,6 +44,7 @@ gem 'carrierwave', '~> 1.3', '>= 1.3.1'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cocoon', '~> 1.2', '>= 1.2.12'
 gem 'gritter', '~> 1.2'
+gem 'twitter', '~> 6.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
