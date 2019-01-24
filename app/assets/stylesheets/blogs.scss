@@ -20,8 +20,14 @@
   text-decoration: none;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #555;
+}
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
 }
 
 .display-4 {
