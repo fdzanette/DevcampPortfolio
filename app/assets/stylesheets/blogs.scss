@@ -9,6 +9,7 @@
 .blog-header {
   line-height: 1;
   border-bottom: 1px solid #e5e5e5;
+  padding: 8px;
 }
 
 .blog-header-logo {
@@ -91,10 +92,11 @@ h1, h2, h3, h4, h5, h6 {
  * Blog name and description
  */
 .blog-title {
-  margin-bottom: 0;
+  margin-bottom: 5px;
   font-size: 2rem;
   font-weight: 400;
 }
+
 .blog-description {
   font-size: 1.1rem;
   color: #999;
@@ -102,7 +104,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 40em) {
   .blog-title {
-    font-size: 3.5rem;
+    font-size: 42px;
   }
 }
 
