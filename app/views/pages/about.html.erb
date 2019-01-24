@@ -1,32 +1,53 @@
-<h1>About Me</h1>
-<hr>
-<div class="row">
-  <div class="col-md-5">
-    <%= image_tag "New-profile.jpg", width: 250, alt: "profile image" %>
-  </div>
-  <div class="col-md-7 text-justify">
-    <p> <strong> I've done quite a bit! Tennis instructor, music studio owner, public employee, stock market analyst, finacial advisor. And after 12 years in financial markets, I wanted to seek another challenge and joined Le Wagon's Batch 138 in São Paulo to become a professional software developer. </strong> </p>
-    <p>
-      <button
-        class="btn btn-primary"
-        type="button"
-        data-toggle="collapse"
-        data-target="#education"
-        aria-expanded="false"
-        aria-controler="education"
-      >
-        Education
-      </button>
-      <p>
-        <span class="collapse" id="education">
-          <span class="card card-body">
-            Le Wagon
-          </span>
-          <span class="card card-body">
-            Estácio
-          </span>
-        </span>
-      </p>
-    </p>
+<div class="app-card-container">
+  <div class="card">
+
+    <h1>About Me</h1>
+    <div class="row">
+      <div class="col-md-5">
+        <%= image_tag "New-profile.jpg", width: 240, alt: "profile image", class: "profile-img" %>
+        <div class="skills">
+           <% @skills.each do |skill| %>
+           <div class="skill">
+            <h4><%= skill.title %></h4>
+            <div class="progress">
+              <div
+                class="progress-bar progress-bar-striped bg-warning"
+                role="progressbar"
+                aria-valuenow="<%= skill.percent_utilized %>"
+                aria-valuemax="100"
+                style="width: <%= skill.percent_utilized %>%"
+                ></div>
+            </div>
+
+           </div>
+           <% end %>
+        </div>
+      </div>
+      <div class="col-md-7 text-justify">
+        <p> <strong> I've done quite a bit! Tennis instructor, music studio owner, public employee, stock market analyst, finacial advisor. And after 12 years in financial markets, I wanted to seek another challenge and joined Le Wagon's Batch 138 in São Paulo to become a professional software developer. </strong> </p>
+        <p>
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#education"
+            aria-expanded="false"
+            aria-controler="education"
+          >
+            Education
+          </button>
+          <p>
+            <span class="collapse" id="education">
+              <span class="card card-body">
+                Le Wagon
+              </span>
+              <span class="card card-body">
+                Estácio
+              </span>
+            </span>
+          </p>
+        </p>
+      </div>
+    </div>
   </div>
 </div>
