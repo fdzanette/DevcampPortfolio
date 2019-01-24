@@ -21,12 +21,11 @@
     <div class="container">
       <div class="row">
 
+          <%= yield %>
 
-        <%= yield %>
+          <%= render 'shared/blog_sidebar' %>
 
-        <%= render 'shared/blog_sidebar' %>
-
-        <%= source_helper("blog") %>
+          <%= source_helper("blog") %>
 
       </div>
     </div>
