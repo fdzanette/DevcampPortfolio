@@ -5,6 +5,7 @@
 
 /* stylelint-disable selector-list-comma-newline-after */
 
+
 .blog-header {
   line-height: 1;
   border-bottom: 1px solid #e5e5e5;
@@ -19,8 +20,14 @@
   text-decoration: none;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #555;
+}
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
 }
 
 .display-4 {
@@ -150,4 +157,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .comment-name {
   font-weight: bold;
+}
+
+.blogcrumb a {
+  font-size: 1.25em;
+  margin: 0px 10px 10px 0px;
+}
+
+.blog-nav {
+  margin-bottom: 30px;
+}
+
+.navbar {
+  text-align: center;
 }

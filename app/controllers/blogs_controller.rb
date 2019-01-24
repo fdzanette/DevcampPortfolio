@@ -1,22 +1,32 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
+  before_action :set_sidebar_topics, except: [:update, :destroy, :toggle_status]
+
   layout "blog"
   access all: [:show, :index], user: {except: [:destroy, :new, :create, :edit, :update, :toggle_status]}, site_admin: :all #petergate gem authorization
 
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.order(created_at: :desc).page(params[:page]).per(5)
+    if logged_in?(:site_admin)
+      @blogs = Blog.order(created_at: :desc).page(params[:page]).per(5)
+    else
+      @blogs = Blog.published.order(created_at: :desc).page(params[:page]).per(5)
+    end
     @page_title = "All Blogs"
   end
 
   # GET /blogs/1
   # GET /blogs/1.json
   def show
-    @blog = Blog.includes(:comments).friendly.find(params[:id])
-    @comment = Comment.new
-    @page_title = @blog.title
-    @seo_keywords = @blog.title
+    if logged_in?(:site_admin) || @blog.published?
+      @blog = Blog.includes(:comments).friendly.find(params[:id])
+      @comment = Comment.new
+      @page_title = @blog.title
+      @seo_keywords = @blog.title
+    else
+      redirect_to blogs_path, notice: "You are not authorized!"
+    end
   end
 
   # GET /blogs/new
@@ -85,6 +95,10 @@ class BlogsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
-      params.require(:blog).permit(:title, :body)
+      params.require(:blog).permit(:title, :body, :topic_id, :status)
+    end
+
+    def set_sidebar_topics
+      @sidebar_topics = Topic.with_blogs
     end
 end

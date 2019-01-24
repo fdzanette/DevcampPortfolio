@@ -7,7 +7,7 @@
     <%= csrf_meta_tags %>
 
     <meta name="keywords" content="<%= @seo_keywords %>">
-
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto:300" rel="stylesheet">
     <%= stylesheet_link_tag    'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -26,8 +26,6 @@
     <%= render 'portfolio_footer' %>
 
     <%= alerts %>
-
-    <%= source_helper("application") %>
 
   </body>
 </html>

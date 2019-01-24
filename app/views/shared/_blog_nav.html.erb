@@ -1,0 +1,15 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+  <div class="container">
+    <h3> <%= link_to "Fabrício Zanette", root_path, class: 'navbar-brand' %> </h3>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+     <ul class="navbar-nav ml-auto">
+       <%= nav_helper 'nav-link', 'span' %>
+       <%= login_helper 'nav-link' %>
+     </ul>
+    </div>
+  </div>
+</nav>

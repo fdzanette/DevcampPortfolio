@@ -27,10 +27,18 @@ a:hover {
 /*
  * Base structure
  */
+//font-family: 'Open Sans Condensed', sans-serif;
+
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Open Sans Condensed', sans-serif;
+font-weight: bold;
+}
+
 
 html,
 body {
   height: 100%;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -190,4 +198,28 @@ body {
   &:hover {
     font-weight: bold;
   }
+}
+
+.app-card-container {
+  text-align: left;
+}
+
+.app-card-container > .card {
+  padding: 25px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+}
+
+.skill {
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+.profile-img {
+  border: 1px solid gray;
+  padding: 1px;
 }
