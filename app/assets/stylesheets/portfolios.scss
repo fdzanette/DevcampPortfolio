@@ -57,3 +57,13 @@ footer p {
 .portfolio-container {
   padding-top: 30px;
 }
+
+.name-link  {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    color: white;
+  }
+}
