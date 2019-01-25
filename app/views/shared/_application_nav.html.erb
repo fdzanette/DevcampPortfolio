@@ -1,9 +1,17 @@
-<div class="masthead mb-auto">
-  <div class="inner inner-app-nav">
+<div class="masthead mb-auto navbar-expand-md">
+  <div class="container inner inner-app-nav">
     <h3 class="masthead-brand">Fabricio Zanette</h3>
-    <nav class="nav nav-masthead justify-content-center app-nav">
-        <%= nav_helper 'nav-link', 'span' %>
-        <%= login_helper 'nav-link' %>
-    </nav>
+      <nav class="navbar navbar-dark">
+        <button class="navbar-toggler bg-dark" type="button" data-toggle="collapse" data-target="#navbarsCollapse" aria-controls="navbarsCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsCollapse">
+         <ul class="navbar-nav ml-auto">
+           <%= nav_helper 'nav-link', 'span' %>
+           <%= login_helper 'nav-link' %>
+         </ul>
+        </div>
+      </nav>
   </div>
 </div>
