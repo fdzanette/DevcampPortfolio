@@ -100,7 +100,7 @@ body {
 }
 
 .masthead.mb-auto {
-  width: 55rem;
+  width: 90%;
 }
 
 /*
@@ -156,7 +156,7 @@ body {
   margin-right: 10px;
 }
 
-#background {
+.background {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -204,13 +204,9 @@ body {
 }
 
 .app-card-container > .card {
+  margin-top: 35px;
   padding: 25px;
   background-color: rgba(0, 0, 0, 0.2);
-}
-
-.contact-info {
-  display: flex;
-  align-items: center;
 }
 
 .skill {
@@ -240,4 +236,19 @@ body {
 
 .navbar.navbar-dark {
   z-index: 15;
+}
+
+.site-wrapper {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  align-items: center;
+}
+
+.nav-super-id {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
