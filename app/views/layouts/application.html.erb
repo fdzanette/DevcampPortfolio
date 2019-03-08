@@ -19,18 +19,21 @@
 
 
   <div class="background"></div>
-  <%= render 'shared/application_nav' %>
-  <div class="text-center">
-    <div class="site-wrapper container">
+    <div class="container">
 
-      <%= yield %>
+      <div class="row home-nav">
+        <%= render 'shared/application_nav' %>
+      </div>
 
-
-      <%= render 'shared/application_footer' %>
-      <%= alerts %>
+      <div class="row site-wrapper">
+        <div class="text-center">
+          <%= yield %>
+        </div>
+      </div>
 
     </div>
-  </div>
+
+  <%= alerts %>
 
   </body>
 </html>
